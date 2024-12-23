@@ -1,0 +1,141 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #C0392B;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #1E1E1E, #2C3E50);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #C0392B;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #C0392B;
+}
+
+/* Ejercicios */
+.exercises {
+  background-color: #1E3A5F;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.exercises h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exercise-card {
+  background-color: #1E1E1E;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+/* Contacto */
+.contact {
+  background-color: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-links a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-links a i {
+  margin-right: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1E1E1E;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #C0392B;
+}
