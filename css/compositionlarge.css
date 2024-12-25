@@ -1,0 +1,38 @@
+/* Large Screen Styles */
+body {
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    height: 60px;
+}
+
+nav a {
+    font-size: 18px;
+}
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+}
+
+footer {
+    padding: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 15px;
+}
