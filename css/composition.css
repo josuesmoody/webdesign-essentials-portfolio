@@ -1,131 +1,133 @@
-/* General Styles */
-body {
-    font-family: 'Open Sans', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Poppins', sans-serif;
     color: #333;
-    background-color: #f9f9f9;
-}
-
-header {
-    background-color: #0044cc;
-    padding: 10px 20px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header img {
-    height: 40px;
-    vertical-align: middle;
-}
-
-header h1 {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 24px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Main Section */
-main {
+    background-color: #F9F9F9;
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-h2 {
-    color: #0044cc;
-}
-
-p {
-    line-height: 1.6;
-}
-
-ol {
-    padding-left: 20px;
-}
-
-ol li {
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #0044cc;
-    color: white;
-    margin-top: 20px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-
-table caption {
+    line-height: 1.8;
+  }
+  
+  /* Header Styling */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-bottom: 2px solid #6C63FF;
+  }
+  
+  header svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  h1 {
+    font-size: 2em;
     font-weight: bold;
-    margin-bottom: 10px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #0044cc;
+    color: #6C63FF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Photo Showcase Styling */
+  section.photo-showcase {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .photo-showcase img {
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Links Styling (Back & View on Pexels) */
+  nav a, .pexels-link {
+    color: #6C63FF;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #6C63FF;
+    transition: all 0.3s;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  nav a:hover, .pexels-link:hover {
+    background-color: #6C63FF;
     color: white;
-}
-
-/* Hover Effects */
-a:hover {
-    color: #ffcc00;
-}
-
-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Text Highlighting */
-::selection {
-    background: #ffcc00;
-    color: #0044cc;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 20px;
-    }
-
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-}
+  }
+  
+  /* EXIF Data Table Styling */
+  .exif-data {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .exif-data h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #6C63FF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exif-data table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exif-data th, .exif-data td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .exif-data th {
+    background-color: #6C63FF;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .exif-data tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Footer Styling */
+  footer {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 0.9em;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+  
+  footer a {
+    margin: 0 5px;
+    color: #6C63FF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Highlight Selection */
+  ::selection {
+    background-color: #6C63FF;
+    color: white;
+  }
+  

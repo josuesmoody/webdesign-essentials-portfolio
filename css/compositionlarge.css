@@ -1,38 +1,42 @@
-/* Large Screen Styles */
-body {
-    font-size: 18px;
-}
+@media screen and (min-width: 768px) {
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-header img {
-    height: 60px;
-}
-
-nav a {
-    font-size: 18px;
-}
-
-main {
-    padding: 40px;
-    max-width: 1200px;
-}
-
-footer {
-    padding: 20px;
-}
-
-/* Table Styles */
-table {
-    width: 80%;
-    margin: 20px auto;
-}
-
-th, td {
-    padding: 15px;
-}
+    /* General Layout */
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    header {
+      padding: 10px 50px;
+    }
+  
+    h1 {
+      font-size: 2.5em;
+    }
+  
+    section {
+      margin: 20px 50px;
+    }
+  
+    /* Foto en columnas */
+    img {
+      max-width: 700px;
+    }
+  
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    li {
+      margin: 0 10px;
+    }
+  
+    /* Footer en fila */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 50px;
+    }
+  }
+  

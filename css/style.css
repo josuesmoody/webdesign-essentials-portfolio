@@ -108,3 +108,66 @@ nav ul li a {
     margin: 0 15px;
     font-size: 24px;
 }
+
+/* General Styles for 404 Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background: #0044cc;
+    color: white;
+}
+
+/* Article */
+article {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+article h2 {
+    color: #0044cc;
+    margin-bottom: 15px;
+}
+
+article p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Links */
+article a {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #0044cc;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
