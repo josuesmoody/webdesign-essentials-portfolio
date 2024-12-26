@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
   
-  /* Body Styling */
+  /* Body */
   body {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -14,7 +14,7 @@
     line-height: 1.8;
   }
   
-  /* Header Styling */
+  /* Header */
   header {
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   }
   
-  /* Photo Showcase Styling */
+  /* Photo Showcase */
   section.photo-showcase {
     text-align: center;
     margin: 20px 0;
@@ -50,7 +50,7 @@
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Links Styling (Back & View on Pexels) */
+  /* Links */
   nav a, .pexels-link {
     color: #6C63FF;
     font-weight: 600;
@@ -68,7 +68,7 @@
     color: white;
   }
   
-  /* EXIF Data Table Styling */
+  /* EXIF Data Table */
   .exif-data {
     margin: 20px auto;
     text-align: center;
@@ -105,7 +105,7 @@
     background-color: #f2f2f2;
   }
   
-  /* Footer Styling */
+  /* Footer */
   footer {
     margin-top: 30px;
     padding: 10px;
