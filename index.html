@@ -1,356 +1,108 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josué Santana - Desarrollador Web</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Header y Navegación */
-        header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            padding: 20px;
-            text-align: right;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 30px;
-            font-size: 16px;
-        }
-
-        /* Hero Section con Efecto Fluido */
-        .hero {
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(
-                to right,
-                #2c5364,
-                #203a43,
-                #0f2027
-            );
-        }
-
-        .fluid-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(45deg, 
-                    rgba(0, 255, 255, 0.3),
-                    rgba(255, 166, 0, 0.3),
-                    rgba(128, 0, 128, 0.3),
-                    rgba(0, 128, 128, 0.3)
-                );
-            filter: blur(10px);
-            animation: moveBackground 20s ease infinite;
-        }
-
-        @keyframes moveBackground {
-            0% { transform: scale(1.2) rotate(0deg); }
-            50% { transform: scale(1.5) rotate(180deg); }
-            100% { transform: scale(1.2) rotate(360deg); }
-        }
-
-        .hero-content {
-            text-align: center;
-            color: white;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .hero-content h2 {
-            font-size: 1.5em;
-            font-weight: normal;
-        }
-
-        /* Perfil Imagen */
-        .profile-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            margin-top: -75px;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-            background-color: #fff;
-        }
-
-        /* Sección Acerca de */
-        .about {
-            text-align: center;
-            padding: 100px 20px 50px;
-            background: white;
-        }
-
-        .about h3 {
-            color: #ff6b6b;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            max-width: 600px;
-            margin: 0 auto;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Sección Trabajos */
-        .works {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .works h3 {
-            color: #ff6b6b;
-            font-size: 2em;
-            margin-bottom: 40px;
-        }
-
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .work-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
-        }
-
-        .work-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .work-info {
-            padding: 15px;
-            background: white;
-        }
-
-        .work-info p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* Sección Contacto */
-        .contact {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .contact h3 {
-            color: #ff6b6b;
-            font-size: 2em;
-            margin-bottom: 40px;
-        }
-
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact input,
-        .contact textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .contact textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        .contact button {
-            background: #4c9aff;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        /* Footer */
-        footer {
-            background: #1f2937;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #374151;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #4b5563;
-        }
-
-        @media (max-width: 768px) {
-            .works-grid {
-                grid-template-columns: 1fr;
-                padding: 0 10px;
-            }
-            
-            nav a {
-                margin-left: 15px;
-                font-size: 14px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAREMETAL Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="#about">Acerca de</a>
-            <a href="#works">Trabajos</a>
-            <a href="#contact">Contacto</a>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.svg" alt="Logo" width="150" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#level1">Level 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#level2">Level 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#level3">Level 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="#level4">Level 4</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section class="hero">
-        <div class="fluid-background"></div>
-        <div class="hero-content">
-            <h1>Josué Santana</h1>
-            <h2>Desarrollador Web</h2>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <header id="home">
+    <h1>VAREMETAL Portfolio</h1>
+    <p>Showcasing the Future of Web Design</p>
+    <a href="#levels" class="btn btn-primary">Get Started</a>
+  </header>
 
-    <div class="profile-container">
-        <img src="images/profile.png" alt="Josué Santana" class="profile-image">
+  <!-- Levels Section -->
+  <section id="levels" class="container py-5">
+    <!-- Level 1 -->
+    <div id="level1" class="level level-row">
+      <img src="images/level1-icon.svg" alt="Level 1" class="level-icon">
+      <h3>Level 1: Basic Styling Unlocked</h3>
+      <p>Mastering the fundamentals of CSS styling and semantic HTML structure.</p>
+      <a href="composition.html" class="btn">Explore Level 1</a>
     </div>
 
-    <section id="about" class="about">
-        <h3>Acerca de</h3>
-        <p>Un viaje de mil millas ha de comenzar con un simple paso. Si está en tu mente está en tu mundo, solo hay que empezar a crear.</p>
-    </section>
+    <!-- Level 2 -->
+    <div id="level2" class="level level-row">
+      <img src="images/level2-icon.svg" alt="Level 2" class="level-icon">
+      <h3>Level 2: CSS Float and Position</h3>
+      <p>Learning layout techniques to structure elements with precision.</p>
+      <a href="projects.html" class="btn">Explore Level 2</a>
+    </div>
 
-    <section id="works" class="works">
-        <h3>Trabajos</h3>
-        <div class="works-grid">
-            <!-- Repetir este bloque 8 veces para los proyectos -->
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="/api/placeholder/250/250" alt="Proyecto">
-                <div class="work-info">
-                    <p>HTML - CSS - PHP</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Level 3 -->
+    <div id="level3" class="level level-row">
+      <img src="images/level3-icon.svg" alt="Level 3" class="level-icon">
+      <h3>Level 3: Flexbox for the Win!</h3>
+      <p>Flexible layouts that adapt seamlessly to different screen sizes.</p>
+      <a href="client.html" class="btn">Explore Level 3</a>
+    </div>
 
-    <section id="contact" class="contact">
-        <h3>Contacto</h3>
-        <form>
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo" required>
-            <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+    <!-- Level 4 -->
+    <div id="level4" class="level level-row">
+      <img src="images/level4-icon.svg" alt="Level 4" class="level-icon">
+      <h3>Level 4: Bootstrap Grid & Design Systems</h3>
+      <p>Creating responsive designs with Bootstrap Grid and modern design systems.</p>
+      <a href="agency.html" class="btn">Explore Level 4</a>
+    </div>
+  </section>
 
-    <footer>
-        <div class="social-links">
-            <a href="#" aria-label="Twitter">T</a>
-            <a href="#" aria-label="Instagram">I</a>
-            <a href="#" aria-label="AWS">A</a>
-            <a href="#" aria-label="YouTube">Y</a>
-            <a href="#" aria-label="LinkedIn">L</a>
-        </div>
-    </footer>
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5 text-center">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for amazing web solutions!</p>
+    <div class="d-flex justify-content-center gap-4">
+      <!-- Contact Buttons -->
+      <a href="mailto:je.santana.dev@gmail.com" class="btn btn-dark">
+        <i class="fas fa-envelope"></i> Email Us
+      </a>
+      <a href="https://www.linkedin.com/in/josue-santana" target="_blank" class="btn btn-dark">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/josuesmoody" target="_blank" class="btn btn-dark">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>&copy; 2024 VAREMETAL Agency. All rights reserved.</p>
+    <a href="https://github.com/josuesmoody" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://pexels.com/@josue-elias-santana-1851219710" target="_blank"><i class="fas fa-image"></i> Pexels</a>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

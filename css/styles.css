@@ -1,0 +1,205 @@
+/* ==== GENERAL RESETS ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* ==== NAVBAR ==== */
+  .navbar {
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar.scrolled {
+    background: #000; 
+  }
+  
+  .navbar-brand img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    color: #6C63FF;
+    transform: scale(1.1);
+  }
+  
+  /* ==== HERO SECTION ==== */
+  header {
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1f1f 40%, #6C63FF 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  header .btn-primary {
+    background-color: #6C63FF;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  header .btn-primary:hover {
+    background-color: #4a43d1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  /* ==== LEVELS SECTION ==== */
+  #levels {
+    padding: 80px 20px;
+  }
+  
+  .level {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    text-align: center;
+  }
+  
+  .level:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .level-icon {
+    width: 100px;
+    height: auto;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .level:hover .level-icon {
+    transform: rotate(10deg) scale(1.1);
+  }
+  
+  .level h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .level p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .level .btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #6C63FF, #4a43d1);
+    border: none;
+    color: white;
+  }
+  
+  .level .btn:hover {
+    background: #4a43d1;
+    transform: scale(1.05);
+  }
+  
+  .level-row:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .level-row:nth-child(even) {
+    background-color: #f1f1f9;
+  }
+  
+  /* ==== FOOTER ==== */
+  footer {
+    background: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #6C63FF;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* ==== RESPONSIVE DESIGN ==== */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  
+    .btn-primary {
+      padding: 10px 20px;
+    }
+  
+    .level h3 {
+      font-size: 1.5rem;
+    }
+  
+    .level p {
+      font-size: 0.9rem;
+    }
+  
+    .level .btn {
+      font-size: 0.9rem;
+    }
+  
+    .level-icon {
+      width: 80px;
+    }
+  }
+  
+  /* ==== CUSTOM SELECTION COLOR ==== */
+  ::selection {
+    background-color: #6C63FF;
+    color: white;
+  }
+  
