@@ -1,71 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Josué Elías Santana">
-    <meta name="description" content="Agency page showcasing design skills, color schemes, and mockups.">
-    <title>Agency</title>
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VAREMETAL Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/agency.css">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="text-center py-4 bg-primary text-white">
-        <img src="images/logo.svg" alt="Agency Logo" class="mb-3" height="50">
-        <h1>Welcome to My Agency</h1>
-        <p>We create modern and visually appealing designs for all industries.</p>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" alt="Logo" width="150" />
+            </a>
+            <!-- Menu Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1>Welcome to VAREMETAL Agency!</h1>
+            <p class="lead">Building the Future of Web Design</p>
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container py-5">
-        <!-- Color Schemes -->
-        <section id="colors" class="mb-5">
-            <h2 class="text-primary">Color Schemes</h2>
-            <p>We develop custom color palettes to match your brand identity and audience preferences.</p>
-            <img src="images/portfolio-1.jpg" class="img-fluid rounded shadow-sm" alt="Color Scheme">
-        </section>
+    <!-- About Section -->
+    <section id="about" class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <img src="images/portfolio-1.jpg" alt="Color Schemes" class="img-fluid rounded" />
+            </div>
+            <div class="col-lg-6">
+                <h2>Color Schemes</h2>
+                <p>We help clients choose perfect color schemes that reflect their identity and resonate with their audience.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Logos -->
-        <section id="logos" class="mb-5">
-            <h2 class="text-primary">Logos</h2>
-            <p>Our logos are designed to be timeless and memorable, ensuring strong visual recognition.</p>
-            <img src="images/portfolio-2.jpg" class="img-fluid rounded shadow-sm" alt="Logo Design">
-        </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="container py-5">
+        <h2 class="text-center mb-5">Portfolio</h2>
+        <div class="row g-4">
+            <!-- Logos -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/portfolio-2.jpg" class="card-img-top" alt="Logo Design" />
+                    <div class="card-body">
+                        <h5 class="card-title">Logos</h5>
+                        <p class="card-text">Custom logos designed to showcase your brand's identity.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Mock-ups -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/portfolio-3.jpg" class="card-img-top" alt="Mock-ups" />
+                    <div class="card-body">
+                        <h5 class="card-title">Mock-ups</h5>
+                        <p class="card-text">Visual mock-ups to help clients visualize final designs before development.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bootstrap Grid -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/portfolio-4.jpg" class="card-img-top" alt="Bootstrap Grid" />
+                    <div class="card-body">
+                        <h5 class="card-title">Bootstrap Grid</h5>
+                        <p class="card-text">We leverage Bootstrap Grid for responsive and dynamic layouts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Mockups -->
-        <section id="mockups" class="mb-5">
-            <h2 class="text-primary">Mockups</h2>
-            <p>Visual mockups help clients visualize their brand identity before development begins.</p>
-            <img src="images/portfolio-3.jpg" class="img-fluid rounded shadow-sm" alt="Mockup Design">
-        </section>
-
-        <!-- Bootstrap Grid -->
-        <section id="bootstrap" class="mb-5">
-            <h2 class="text-primary">Bootstrap Grid</h2>
-            <p>We leverage Bootstrap Grid for responsive and consistent layouts across devices.</p>
-            <img src="images/portfolio-4.jpg" class="img-fluid rounded shadow-sm" alt="Bootstrap Example">
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center mb-4">Get in touch with us to create your perfect website!</p>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="https://github.com/josuesmoody" class="btn btn-dark" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://pexels.com" class="btn btn-dark" target="_blank">
+                <i class="fas fa-image"></i> Pexels
+            </a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center py-4 bg-primary text-white">
-        <p>
-            <a href="https://pexels.com" target="_blank" class="text-white">My Pexels Profile</a> |
-            <a href="https://github.com/josuesmoody" target="_blank" class="text-white">GitHub</a> |
-            <a href="#top" class="text-white">Back to Top</a>
-        </p>
+    <footer class="text-white text-center py-4" style="background-color: #000;">
+        <p>&copy; 2024 VAREMETAL Agency. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
